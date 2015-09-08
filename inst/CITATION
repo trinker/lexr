@@ -1,0 +1,16 @@
+citHeader("To cite lexr in publications, please use:")
+
+
+citEntry(entry = "manual",
+    title = "{lexr}: Lexical Dispersion Plotting",
+    author = "Tyler W. Rinker",
+    organization = "University at Buffalo/SUNY",
+    address = "Buffalo, New York",
+    note = "version 0.0.1",
+    year = "2015",
+    url = "http://github.com/trinker/lexr",
+    textVersion  = paste("Rinker, T. W. (2015).",
+        "lexr: Lexical Dispersion Plotting",
+        "version 0.0.1. University at Buffalo. Buffalo, New York.",
+        "http://github.com/trinker/lexr")
+)
