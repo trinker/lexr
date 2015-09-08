@@ -150,7 +150,7 @@ Schiffrin, D. (2001). Discourse markers: Language, meaning, and context.
   In D. Schiffrin, D. Tannen, & H. E. Hamilton (Eds.), The handbook of     
   discourse analysis (pp. 54-75). Malden, MA: Blackwell Publishing.     
 
-```{r, fig.height=12}
+```{r, fig.height=9}
 discoure_markers <- list(
     response_cries = c(" oh ", " ah ", " aha ", " ouch ", " yuk "),
     back_channels = c(" uh-huh ", " uhuh ", " yeah "),
