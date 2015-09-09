@@ -110,7 +110,7 @@ A collection of different lexical dispersion plots made with **lexr** +
     ## Presidential debates by all
     wrds <- word_list(pres_debates2012$dialogue, stopwords = Top200Words)
     wrds2 <- spaste(wrds[["rfswl"]][["all"]][, "WORD"])
-    wrds2 <- c(" governor~~romney ", wrds2[-c(3, 12)])
+    wrds2 <- c(" governor romney ", wrds2[-c(3, 12)])
     with(pres_debates2012 , lexical_dispersion_plot(dialogue, wrds2, , time))
 
 ![](inst/figure/unnamed-chunk-3-7.png)

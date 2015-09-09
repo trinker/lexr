@@ -291,7 +291,7 @@ lexical_dispersion_plot <- function(text.var, term.list, grouping.var = NULL,
     if (!is.null(total.color) && !is.null(grps)) {
         x[, 'sub' := 'All']
         lvls <- levels(x[["grouping"]])
-        x <- melt(x, measure.vars = c("grouping", "sub"),
+        x <- data.table::melt(x, measure.vars = c("grouping", "sub"),
             variable.name = "summary", value.name ="grouping")[,
             'grouping' := factor(grouping, levels = c("All", lvls))]
         cols <- c(color, total.color)
