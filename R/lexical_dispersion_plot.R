@@ -66,17 +66,17 @@
 #'
 #' term_match(raj$dialogue, c(" love ", "love", " night ", "night"))
 #' lexical_dispersion_plot(raj$dialogue, c(" love ", "love", " night ", "night"))
-#' lexical_dispersion_plot(raj$dialogue, c("love", "night"), dispersion_plo = raj$act)
+#' lexical_dispersion_plot(raj$dialogue, c("love", "night"), rm.var = raj$act)
 #' with(rajSPLIT , lexical_dispersion_plot(dialogue, c("love", "night"),
-#'     grouping.var = list(fam.aff, sex), dispersion_plo = act))
+#'     grouping.var = list(fam.aff, sex), rm.var = act))
 #'
 #' ## With grouping variables
 #' with(rajSPLIT , lexical_dispersion_plot(dialogue, c("love", "night"),
-#'      grouping.var = sex, dispersion_plo = act))
+#'      grouping.var = sex, rm.var = act))
 #'
 #' ## Drop total with `total.color = NULL`
 #' with(rajSPLIT , lexical_dispersion_plot(dialogue, c("love", "night"),
-#'      grouping.var = sex, dispersion_plo = act, total.color = NULL))
+#'      grouping.var = sex, rm.var = act, total.color = NULL))
 #'
 #' ## Change color scheme
 #' with(rajSPLIT, lexical_dispersion_plot(dialogue, c("love", "night"),
@@ -99,7 +99,7 @@
 #'     " job", " i ", " you ", " because ", " our ", " years ")
 #'
 #' with(dat, lexical_dispersion_plot(dialogue, wordlist, total.color = NULL,
-#'     bg.color = "white", grouping.var = person, dispersion_plo = time,
+#'     bg.color = "white", grouping.var = person, rm.var = time,
 #'     color = "black", horiz.color="grey80"))
 #'
 #' wordlist2 <- c(" i'd ", " i'll ", " i'm ", " i've ", " i ",
@@ -108,11 +108,11 @@
 #'     " he'd ", " he'll ", " he's ", " he ")
 #'
 #' with(dat, lexical_dispersion_plot(dialogue, wordlist2,
-#'     bg.color = "black", grouping.var = person, dispersion_plo = time,
+#'     bg.color = "black", grouping.var = person, rm.var = time,
 #'     color = "yellow", total.color = NULL, horiz.color="grey20"))
 #'
 #' with(dat, lexical_dispersion_plot(dialogue, wordlist2,
-#'     bg.color = "black", grouping.var = person, dispersion_plo = time,
+#'     bg.color = "black", grouping.var = person, rm.var = time,
 #'     color = "red", total.color = "white", horiz.color="grey20"))
 #'
 #' ## `match.terms` as a named list
@@ -124,7 +124,7 @@
 #' )
 #'
 #' with(dat, lexical_dispersion_plot(dialogue, wordlist3,
-#'     bg.color = "grey60", grouping.var = person, dispersion_plo = time,
+#'     bg.color = "grey60", grouping.var = person, rm.var = time,
 #'     color = "blue", total.color = "grey40", horiz.color="grey20"))
 #'
 #' colsplit2df(scores(with(dat, termco(dialogue, list(time, person), wordlist3))))
@@ -132,7 +132,7 @@
 #' ## Extras:
 #' ## Reverse facets
 #'
-#' x <- with(pres_debates2012 , lexical_dispersion_plot(dialogue, wrds2, dispersion_plo = time))
+#' x <- with(pres_debates2012 , lexical_dispersion_plot(dialogue, wrds2, rm.var = time))
 #'
 #' ## function to reverse ggplot2 facets
 #' rev_facet <- function(x) {

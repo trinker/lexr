@@ -78,24 +78,24 @@ A collection of different lexical dispersion plots made with **lexr** +
 
 ![](inst/figure/unnamed-chunk-3-1.png)
 
-    lexical_dispersion_plot(raj$dialogue, c("love", "night"), dispersion_plo = raj$act)
+    lexical_dispersion_plot(raj$dialogue, c("love", "night"), rm.var =raj$act)
 
 ![](inst/figure/unnamed-chunk-3-2.png)
 
     with(rajSPLIT , lexical_dispersion_plot(dialogue, c("love", "night"),
-        grouping.var = list(fam.aff, sex), dispersion_plo = act))
+        grouping.var = list(fam.aff, sex), rm.var =act))
 
 ![](inst/figure/unnamed-chunk-3-3.png)
 
     ## With grouping variables
     with(rajSPLIT , lexical_dispersion_plot(dialogue, c("love", "night"),
-         grouping.var = sex, dispersion_plo = act))
+         grouping.var = sex, rm.var =act))
 
 ![](inst/figure/unnamed-chunk-3-4.png)
 
     ## Drop total with `total.color = NULL`
     with(rajSPLIT , lexical_dispersion_plot(dialogue, c("love", "night"),
-         grouping.var = sex, dispersion_plo = act, total.color = NULL))
+         grouping.var = sex, rm.var =act, total.color = NULL))
 
 ![](inst/figure/unnamed-chunk-3-5.png)
 
@@ -124,7 +124,7 @@ A collection of different lexical dispersion plots made with **lexr** +
         " job", " i ", " you ", " because ", " our ", " years ")
 
     with(dat, lexical_dispersion_plot(dialogue, wordlist, total.color = NULL,
-        bg.color = "white", grouping.var = person, dispersion_plo = time,
+        grouping.var = person, time, bg.color = "white",
         color = "black", horiz.color="grey80"))
 
 ![](inst/figure/unnamed-chunk-4-1.png)
@@ -135,13 +135,13 @@ A collection of different lexical dispersion plots made with **lexr** +
         " he'd ", " he'll ", " he's ", " he ")
 
     with(dat, lexical_dispersion_plot(dialogue, wordlist2,
-        bg.color = "black", grouping.var = person, dispersion_plo = time,
+        grouping.var = person, time, bg.color = "black",
         color = "yellow", total.color = NULL, horiz.color="grey20"))
 
 ![](inst/figure/unnamed-chunk-4-2.png)
 
-    with(dat, lexical_dispersion_plot(dialogue, wordlist2,
-        bg.color = "black", grouping.var = person, dispersion_plo = time,
+    with(dat, lexical_dispersion_plot(dialogue, wordlist2, 
+        grouping.var = person, time, bg.color = "black",
         color = "red", total.color = "white", horiz.color="grey20"))
 
 ![](inst/figure/unnamed-chunk-4-3.png)
@@ -155,7 +155,7 @@ A collection of different lexical dispersion plots made with **lexr** +
     )
 
     with(dat, lexical_dispersion_plot(dialogue, wordlist3,
-        bg.color = "grey60", grouping.var = person, dispersion_plo = time,
+        grouping.var = person, time, bg.color = "grey60",
         color = "blue", total.color = "grey40", horiz.color="grey20"))
 
 ![](inst/figure/unnamed-chunk-5-1.png)
@@ -163,7 +163,7 @@ A collection of different lexical dispersion plots made with **lexr** +
 Reverse facets
 --------------
 
-    x <- with(pres_debates2012 , lexical_dispersion_plot(dialogue, wrds2, dispersion_plo = time))
+    x <- with(pres_debates2012 , lexical_dispersion_plot(dialogue, "economy", ,time))
 
 ![](inst/figure/unnamed-chunk-6-1.png)
 
