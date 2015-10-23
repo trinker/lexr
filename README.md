@@ -6,7 +6,7 @@ lexr
 Status](https://travis-ci.org/trinker/lexr.svg?branch=master)](https://travis-ci.org/trinker/lexr)
 [![Coverage
 Status](https://coveralls.io/repos/trinker/lexr/badge.svg?branch=master)](https://coveralls.io/r/trinker/lexr?branch=master)
-<a href="https://img.shields.io/badge/Version-0.0.1-orange.svg"><img src="https://img.shields.io/badge/Version-0.0.1-orange.svg" alt="Version"/></a>
+<a href="https://img.shields.io/badge/Version-0.1.0-orange.svg"><img src="https://img.shields.io/badge/Version-0.1.0-orange.svg" alt="Version"/></a>
 </p>
 <img src="inst/lexr_logo/r_lexr.png" width="135" alt="lexr Logo">
 

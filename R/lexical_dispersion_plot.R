@@ -360,7 +360,12 @@ locate_terms <- function(text.var, term.list, ignore.case = TRUE, along = NULL, 
     sub_outs <- stringi::stri_detect_regex(terms_unlisted, "[:alnum:]\\s+[:alnum:]")
     if (sum(sub_outs) > 0){
         sub_outs <- terms_unlisted[sub_outs]
-        text.var <- gsub(sub_outs, gsub("(?<!^)\\s+(?!$)", "dispholderdisp", sub_outs, perl=TRUE), text.var , ignore.case = ignore.case)
+        sub_ins <- gsub("(?<!^)\\s+(?!$)", "dispholderdisp", sub_outs, perl=TRUE)
+
+        for (i in seq_len(length(sub_outs))){
+            text.var <- gsub(sub_outs[i], sub_ins[i], text.var , ignore.case = ignore.case)
+        }
+
     }
 
     nms <- names(term.list)

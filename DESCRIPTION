@@ -1,6 +1,6 @@
 Package: lexr
 Title: Lexical Dispersion Plotting
-Version: 0.0.1
+Version: 0.1.0
 Authors@R: c(person("Tyler", "Rinker", email =
         "tyler.rinker@gmail.com", role = c("aut", "cre")))
 Maintainer: Tyler Rinker <tyler.rinker@gmail.com>
@@ -8,7 +8,7 @@ Description: Easily produce and style lexical dispersion plots.
 Depends: R (>= 3.2.2)
 Imports: data.table (>= 1.9.5), ggplot2, graphics, stats, stringi
 Suggests: testthat
-Date: 2015-09-08
+Date: 2015-10-22
 License: GPL-2
 LazyData: TRUE
 Roxygen: list(wrap = FALSE)

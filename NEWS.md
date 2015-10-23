@@ -6,7 +6,7 @@ Versioning
 
 Releases will be numbered with the following semantic versioning format:
 
-<major>.<minor>.<patch>
+&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;
 
 And constructed with the following guidelines:
 
@@ -20,17 +20,17 @@ And constructed with the following guidelines:
 lexr 0.1.0
 ----------------------------------------------------------------
 
-BUG FIXES
+**BUG FIXES**
 
 * `lexical_dispersion` errored if `term.list` contained two terms with spaces.
 
-NEW FEATURES
+**NEW FEATURES**
 
-MINOR FEATURES
+**MINOR FEATURES**
 
 IMPROVEMENTS
 
-CHANGES
+**CHANGES**
 
 
 lexr 0.0.1
