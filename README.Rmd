@@ -18,7 +18,7 @@ verbadge <- sprintf('<a href="https://img.shields.io/badge/Version-%s-orange.svg
 [![Coverage Status](https://coveralls.io/repos/trinker/lexr/badge.svg?branch=master)](https://coveralls.io/r/trinker/lexr?branch=master)
 `r verbadge`
 
-<img src="inst/lexr_logo/r_lexr.png" width="135" alt="lexr Logo">  
+![](tools/lexr_logo/r_lexr.png)
 
 ```{r, echo=FALSE}
 library(knitr)
@@ -28,7 +28,7 @@ knit_hooks$set(htmlcap = function(before, options, envir) {
     }
     })
 knitr::opts_knit$set(self.contained = TRUE, cache = FALSE)
-knitr::opts_chunk$set(fig.path = "inst/figure/")
+knitr::opts_chunk$set(fig.path = "tools/figure/")
 ```
 
 **lexr** is an R package designed to quickly make lexical dispersion plots.  The user will typically be interested in the `lexical_dispersion_plot` function.
@@ -127,20 +127,6 @@ wordlist3 <- list(
 with(dat, lexical_dispersion_plot(dialogue, wordlist3,
     grouping.var = person, time, bg.color = "grey60",
     color = "blue", total.color = "grey40", horiz.color="grey20"))
-```
-
-## Reverse facets
-
-```{r, fig.height=3}
-x <- with(pres_debates2012 , lexical_dispersion_plot(dialogue, "economy", ,time))
-
-## function to reverse ggplot2 facets
-rev_facet <- function(x) {
-    names(x$facet)[1:2] <- names(x$facet)[2:1]
-    print(x)
-}
-
-rev_facet(x)
 ```
 
 

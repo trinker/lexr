@@ -1,4 +1,4 @@
-lexr
+lexr   [![Follow](https://img.shields.io/twitter/follow/tylerrinker.svg?style=social)](https://twitter.com/intent/follow?screen_name=tylerrinker)
 ============
 
 
@@ -8,7 +8,8 @@ Status](https://travis-ci.org/trinker/lexr.svg?branch=master)](https://travis-ci
 Status](https://coveralls.io/repos/trinker/lexr/badge.svg?branch=master)](https://coveralls.io/r/trinker/lexr?branch=master)
 <a href="https://img.shields.io/badge/Version-0.1.0-orange.svg"><img src="https://img.shields.io/badge/Version-0.1.0-orange.svg" alt="Version"/></a>
 </p>
-<img src="inst/lexr_logo/r_lexr.png" width="135" alt="lexr Logo">
+
+![](tools/lexr_logo/r_lexr.png)
 
 **lexr** is an R package designed to quickly make lexical dispersion
 plots. The user will typically be interested in the
@@ -21,7 +22,6 @@ Table of Contents
 -   [Installation](#installation)
 -   [Contact](#contact)
 -   [Examples](#examples)
-    -   [Reverse facets](#reverse-facets)
     -   [Discourse Markers](#discourse-markers)
 
 Installation
@@ -41,11 +41,10 @@ to install the development version:
 Contact
 =======
 
-You are welcome to: 
-* submit suggestions and bug-reports at: <https://github.com/trinker/lexr/issues> 
-* send a pull request on: <https://github.com/trinker/lexr/> 
-* compose a friendly e-mail to: <tyler.rinker@gmail.com>
-
+You are welcome to:    
+- submit suggestions and bug-reports at: <https://github.com/trinker/lexr/issues>    
+- send a pull request on: <https://github.com/trinker/lexr/>    
+- compose a friendly e-mail to: <tyler.rinker@gmail.com>    
 
 Examples
 ========
@@ -76,35 +75,47 @@ A collection of different lexical dispersion plots made with **lexr** +
 
     lexical_dispersion_plot(raj$dialogue, c(" love ", "love", " night ", "night"))
 
-![](inst/figure/unnamed-chunk-3-1.png)
+    ## Warning: Ignoring unknown aesthetics: position
+
+![](tools/figure/unnamed-chunk-28-1.png)
 
     lexical_dispersion_plot(raj$dialogue, c("love", "night"), rm.var =raj$act)
 
-![](inst/figure/unnamed-chunk-3-2.png)
+    ## Warning: Ignoring unknown aesthetics: position
+
+![](tools/figure/unnamed-chunk-28-2.png)
 
     with(rajSPLIT , lexical_dispersion_plot(dialogue, c("love", "night"),
         grouping.var = list(fam.aff, sex), rm.var =act))
 
-![](inst/figure/unnamed-chunk-3-3.png)
+    ## Warning: Ignoring unknown aesthetics: position
+
+![](tools/figure/unnamed-chunk-28-3.png)
 
     ## With grouping variables
     with(rajSPLIT , lexical_dispersion_plot(dialogue, c("love", "night"),
          grouping.var = sex, rm.var =act))
 
-![](inst/figure/unnamed-chunk-3-4.png)
+    ## Warning: Ignoring unknown aesthetics: position
+
+![](tools/figure/unnamed-chunk-28-4.png)
 
     ## Drop total with `total.color = NULL`
     with(rajSPLIT , lexical_dispersion_plot(dialogue, c("love", "night"),
          grouping.var = sex, rm.var =act, total.color = NULL))
 
-![](inst/figure/unnamed-chunk-3-5.png)
+    ## Warning: Ignoring unknown aesthetics: position
+
+![](tools/figure/unnamed-chunk-28-5.png)
 
     ## Change color scheme
     with(rajSPLIT, lexical_dispersion_plot(dialogue, c("love", "night"),
         bg.color = "black", grouping.var = list(fam.aff, sex),
         color = "yellow", total.color = "white", horiz.color="grey20"))
 
-![](inst/figure/unnamed-chunk-3-6.png)
+    ## Warning: Ignoring unknown aesthetics: position
+
+![](tools/figure/unnamed-chunk-28-6.png)
 
     ## Use `word_list`
     ## Presidential debates by all
@@ -113,7 +124,9 @@ A collection of different lexical dispersion plots made with **lexr** +
     wrds2 <- c(" governor romney ", wrds2[-c(3, 12)])
     with(pres_debates2012 , lexical_dispersion_plot(dialogue, wrds2, , time))
 
-![](inst/figure/unnamed-chunk-3-7.png)
+    ## Warning: Ignoring unknown aesthetics: position
+
+![](tools/figure/unnamed-chunk-28-7.png)
 
     ## Presidential debates by person
     dat <- pres_debates2012
@@ -127,7 +140,9 @@ A collection of different lexical dispersion plots made with **lexr** +
         grouping.var = person, time, bg.color = "white",
         color = "black", horiz.color="grey80"))
 
-![](inst/figure/unnamed-chunk-4-1.png)
+    ## Warning: Ignoring unknown aesthetics: position
+
+![](tools/figure/unnamed-chunk-29-1.png)
 
     wordlist2 <- c(" i'd ", " i'll ", " i'm ", " i've ", " i ",
         " we'd ", " we'll ", " we're ", " we've ", " we ",
@@ -138,13 +153,17 @@ A collection of different lexical dispersion plots made with **lexr** +
         grouping.var = person, time, bg.color = "black",
         color = "yellow", total.color = NULL, horiz.color="grey20"))
 
-![](inst/figure/unnamed-chunk-4-2.png)
+    ## Warning: Ignoring unknown aesthetics: position
+
+![](tools/figure/unnamed-chunk-29-2.png)
 
     with(dat, lexical_dispersion_plot(dialogue, wordlist2, 
         grouping.var = person, time, bg.color = "black",
         color = "red", total.color = "white", horiz.color="grey20"))
 
-![](inst/figure/unnamed-chunk-4-3.png)
+    ## Warning: Ignoring unknown aesthetics: position
+
+![](tools/figure/unnamed-chunk-29-3.png)
 
     ## `match.terms` as a named list
     wordlist3 <- list(
@@ -158,32 +177,17 @@ A collection of different lexical dispersion plots made with **lexr** +
         grouping.var = person, time, bg.color = "grey60",
         color = "blue", total.color = "grey40", horiz.color="grey20"))
 
-![](inst/figure/unnamed-chunk-5-1.png)
+    ## Warning: Ignoring unknown aesthetics: position
 
-Reverse facets
---------------
-
-    x <- with(pres_debates2012 , lexical_dispersion_plot(dialogue, "economy", ,time))
-
-![](inst/figure/unnamed-chunk-6-1.png)
-
-    ## function to reverse ggplot2 facets
-    rev_facet <- function(x) {
-        names(x$facet)[1:2] <- names(x$facet)[2:1]
-        print(x)
-    }
-
-    rev_facet(x)
-
-![](inst/figure/unnamed-chunk-6-2.png)
+![](tools/figure/unnamed-chunk-30-1.png)
 
 Discourse Markers
 -----------------
 
 Schiffrin, D. (2001). Discourse markers: Language, meaning, and
 context.  
- In D. Schiffrin, D. Tannen, & H. E. Hamilton (Eds.), The handbook of  
- discourse analysis (pp. 54-75). Malden, MA: Blackwell Publishing.
+In D. Schiffrin, D. Tannen, & H. E. Hamilton (Eds.), The handbook of  
+discourse analysis (pp. 54-75). Malden, MA: Blackwell Publishing.
 
     discoure_markers <- list(
         response_cries = c(" oh ", " ah ", " aha ", " ouch ", " yuk "),
@@ -210,10 +214,12 @@ context.
 
     plot(markers, high="red")
 
-![](inst/figure/unnamed-chunk-7-1.png)
+![](tools/figure/unnamed-chunk-31-1.png)
 
     with(pres_debates2012,
         lexical_dispersion_plot(dialogue, discoure_markers, person, time)
     )
 
-![](inst/figure/unnamed-chunk-7-2.png)
+    ## Warning: Ignoring unknown aesthetics: position
+
+![](tools/figure/unnamed-chunk-31-2.png)
